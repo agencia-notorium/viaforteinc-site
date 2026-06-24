@@ -1,2 +1,13 @@
 node_modules/
 .env
+.env.*
+
+# Backups gerados durante edições
+*.bak
+*.bak2
+
+# Arquivos de sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
