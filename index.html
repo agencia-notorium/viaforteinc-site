@@ -1282,12 +1282,12 @@ footer {
       <div class="slide-bg" style="background-image:url('assets/tallinn.png')"></div>
       <div class="slide-vignette"></div>
       <div class="slide-content">
-        <div class="slide-badge">Lançamento · Vila Velha</div>
-        <h1 class="slide-title">Tallinn<br>Smart Living</h1>
-        <div class="slide-specs">Studio · 40 m²</div>
-        <div class="slide-specs">O futuro do morar inteligente</div>
+        <div class="slide-badge">Praia de Itaparica · Vila Velha</div>
+        <h1 class="slide-title">Tallinn<br>Fort Residence</h1>
+        <div class="slide-specs">Estúdios e apartamentos Garden</div>
+        <div class="slide-specs">Viver à beira-mar em Vila Velha</div>
         <div class="slide-divider"></div>
-        <a href="#" class="slide-cta" onclick="openProject('tallinn'); return false;">Conheça o empreendimento</a>
+        <a href="#" class="slide-cta" onclick="openProject('tallinn'); return false;">Saiba mais</a>
       </div>
     </div>
 
@@ -1296,10 +1296,10 @@ footer {
       <div class="slide-bg" style="background-image:url('assets/paradiso.png')"></div>
       <div class="slide-vignette"></div>
       <div class="slide-content">
-        <div class="slide-badge">Entregue · Vitória</div>
-        <h1 class="slide-title">Vila<br>Paradiso</h1>
-        <div class="slide-specs">100% Vendido</div>
-        <div class="slide-specs">Apartamentos 2 e 3 quartos com suíte</div>
+        <div class="slide-badge">100% Vendido · Vitória</div>
+        <h1 class="slide-title">Villa<br>Paradiso</h1>
+        <div class="slide-specs">2 e 3 quartos com suíte e apartamentos Garden</div>
+        <div class="slide-specs">Barro Vermelho · Pronto para morar · 100% vendido</div>
         <div class="slide-divider"></div>
         <a href="#" class="slide-cta" onclick="openProject('paradiso'); return false;">Conheça o empreendimento</a>
       </div>
@@ -1310,10 +1310,10 @@ footer {
       <div class="slide-bg" style="background-image:url('assets/galle.png')"></div>
       <div class="slide-vignette"></div>
       <div class="slide-content">
-        <div class="slide-badge">Em Breve · Vila Velha</div>
-        <h1 class="slide-title">Galle</h1>
-        <div class="slide-specs">Apartamentos 2 quartos com suíte</div>
-        <div class="slide-specs">Um novo endereço em Vila Velha</div>
+        <div class="slide-badge">Breve lançamento · Vila Velha</div>
+        <h1 class="slide-title">Galle<br>Fort Residence</h1>
+        <div class="slide-specs">1 quarto e 2 quartos</div>
+        <div class="slide-specs">Jockey de Itaparica · Vila Velha</div>
         <div class="slide-divider"></div>
         <a href="#" class="slide-cta" onclick="openProject('galle'); return false;">Saiba mais</a>
       </div>
@@ -1349,48 +1349,50 @@ footer {
     </div>
     <div class="emp-filters">
       <button class="filter-btn active" onclick="filterCards('todos', this)">Todos</button>
-      <button class="filter-btn" onclick="filterCards('lancamento', this)">Lançamento</button>
-      <button class="filter-btn" onclick="filterCards('obras', this)">Em obras</button>
-      <button class="filter-btn" onclick="filterCards('entregue', this)">Entregue</button>
+      <button class="filter-btn" onclick="filterCards('lancamento', this)">Lançamentos</button>
+      <button class="filter-btn" onclick="filterCards('entregue', this)">Prontos para morar</button>
     </div>
   </div>
   <div class="cards-grid">
 
-    <!-- Card 1 -->
+    <!-- Card 1 — Tallinn -->
     <div class="emp-card fade-up delay-1" data-cat="lancamento" onclick="openProject('tallinn')">
       <div class="emp-card-img" style="background-image:url('assets/tallinn.png')"></div>
       <div class="emp-card-overlay"></div>
-      <div class="emp-card-badge badge-lancamento">Lançamento · Vila Velha</div>
+      <div class="emp-card-badge badge-lancamento">Saiba mais</div>
       <div class="emp-card-content">
-        <div class="emp-card-name">Tallinn<br>Smart Living</div>
+        <div class="emp-card-name">Tallinn<br>Fort Residence</div>
         <div class="emp-card-divider"></div>
-        <div class="emp-card-specs">Studio · 40 m²</div>
+        <div class="emp-card-specs">Praia de Itaparica · Vila Velha</div>
+        <div class="emp-card-specs">Estúdios e apartamentos Garden</div>
         <div class="emp-card-cta">Ver empreendimento →</div>
       </div>
     </div>
 
-    <!-- Card 2 -->
-    <div class="emp-card fade-up delay-2" data-cat="entregue" onclick="openProject('paradiso')">
-      <div class="emp-card-img" style="background-image:url('assets/paradiso.png')"></div>
-      <div class="emp-card-overlay"></div>
-      <div class="emp-card-badge badge-entregue">Entregue · Vitória</div>
-      <div class="emp-card-content">
-        <div class="emp-card-name">Vila<br>Paradiso</div>
-        <div class="emp-card-divider"></div>
-        <div class="emp-card-specs">100% Vendido · Aptos 2 e 3 quartos com suíte</div>
-        <div class="emp-card-cta">Ver empreendimento →</div>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="emp-card fade-up delay-3" data-cat="obras" onclick="openProject('galle')">
+    <!-- Card 2 — Galle -->
+    <div class="emp-card fade-up delay-2" data-cat="lancamento" onclick="openProject('galle')">
       <div class="emp-card-img" style="background-image:url('assets/galle.png')"></div>
       <div class="emp-card-overlay"></div>
-      <div class="emp-card-badge badge-obras">Em breve · Vila Velha</div>
+      <div class="emp-card-badge badge-lancamento">Breve lançamento</div>
       <div class="emp-card-content">
-        <div class="emp-card-name">Galle</div>
+        <div class="emp-card-name">Galle<br>Fort Residence</div>
         <div class="emp-card-divider"></div>
-        <div class="emp-card-specs">Apartamentos 2 quartos com suíte</div>
+        <div class="emp-card-specs">Jockey de Itaparica · Vila Velha</div>
+        <div class="emp-card-specs">1 quarto e 2 quartos</div>
+        <div class="emp-card-cta">Ver empreendimento →</div>
+      </div>
+    </div>
+
+    <!-- Card 3 — Villa Paradiso -->
+    <div class="emp-card fade-up delay-3" data-cat="entregue" onclick="openProject('paradiso')">
+      <div class="emp-card-img" style="background-image:url('assets/paradiso.png')"></div>
+      <div class="emp-card-overlay"></div>
+      <div class="emp-card-badge badge-entregue">Pronto para morar · 100% vendido</div>
+      <div class="emp-card-content">
+        <div class="emp-card-name">Villa<br>Paradiso</div>
+        <div class="emp-card-divider"></div>
+        <div class="emp-card-specs">Barro Vermelho · Vitória</div>
+        <div class="emp-card-specs">2 e 3 quartos com suíte e apartamentos Garden</div>
         <div class="emp-card-cta">Ver empreendimento →</div>
       </div>
     </div>
@@ -1694,40 +1696,28 @@ function filterCards(cat, btn) {
 // ── PROJECT DATA
 const projects = {
   tallinn: {
-    title: 'Tallinn <em>Smart Living</em>',
+    title: 'Tallinn <em>Fort Residence</em>',
     img: 'assets/tallinn.png',
-    specs: ['Vila Velha', 'Studio · 40 m²', 'Lançamento'],
-    desc: 'O Tallinn Smart Living redefine o conceito de morar inteligente em Vila Velha. Desenvolvido para quem valoriza localização privilegiada e arquitetura eficiente, cada studio foi projetado para maximizar o aproveitamento do espaço sem abrir mão do sofisticado.',
-    quote: '"Viver com inteligência é escolher onde cada metro quadrado tem propósito."',
-    gallery: [
-      'assets/tallinn.png',
-      'assets/paradiso.png',
-      'assets/galle.png',
-    ]
-  },
-  paradiso: {
-    title: 'Vila <em>Paradiso</em>',
-    img: 'assets/paradiso.png',
-    specs: ['Vitória', 'Aptos 2 e 3 quartos com suíte', 'Entregue · 100% Vendido'],
-    desc: 'O Vila Paradiso nasceu com a missão de elevar o padrão de vida em Vitória. Com apartamentos de 2 e 3 quartos com suíte, o empreendimento entregue e 100% vendido é a prova da confiança que o mercado deposita na Via Forte Incorporadora.',
-    quote: '"Quando cada detalhe é pensado, o resultado é inevitável."',
-    gallery: [
-      'assets/paradiso.png',
-      'assets/tallinn.png',
-      'assets/galle.png',
-    ]
+    specs: ['Praia de Itaparica · Vila Velha', 'Estúdios e apartamentos Garden', 'Saiba mais'],
+    desc: 'O Tallinn Fort Residence eleva o conceito de morar na Praia de Itaparica, em Vila Velha. Com estúdios e apartamentos Garden de arquitetura contemporânea, foi concebido para quem valoriza a vida à beira-mar, localização privilegiada e design inteligente. Cadastre-se para saber mais.',
+    quote: '"Morar à beira-mar com a assinatura Via Forte."',
+    gallery: []
   },
   galle: {
-    title: '<em>Galle</em>',
+    title: 'Galle <em>Fort Residence</em>',
     img: 'assets/galle.png',
-    specs: ['Vila Velha', 'Apartamentos 2 quartos com suíte', 'Em Breve'],
-    desc: 'O Galle é o próximo capítulo da Via Forte em Vila Velha. Um empreendimento pensado para quem busca qualidade de vida, localização estratégica e o padrão de entrega que só a Via Forte oferece. Cadastre-se para ter acesso em primeira mão.',
+    specs: ['Jockey de Itaparica · Vila Velha', '1 quarto e 2 quartos', 'Breve lançamento'],
+    desc: 'O Galle Fort Residence é o próximo capítulo da Via Forte no Jockey de Itaparica, em Vila Velha. Apartamentos de 1 e 2 quartos pensados para quem busca localização estratégica e o padrão de entrega que só a Via Forte oferece. Cadastre-se para ter acesso em primeira mão.',
     quote: '"O melhor endereço de amanhã começa com a decisão de hoje."',
-    gallery: [
-      'assets/galle.png',
-      'assets/paradiso.png',
-      'assets/tallinn.png',
-    ]
+    gallery: []
+  },
+  paradiso: {
+    title: 'Villa <em>Paradiso</em>',
+    img: 'assets/paradiso.png',
+    specs: ['Barro Vermelho · Vitória', '2 e 3 quartos com suíte e apartamentos Garden', 'Pronto para morar · 100% vendido'],
+    desc: 'O Villa Paradiso elevou o padrão de vida no Barro Vermelho, em Vitória. Com apartamentos de 2 e 3 quartos com suíte e unidades Garden, o empreendimento pronto para morar e 100% vendido é a prova da confiança que o mercado deposita na Via Forte Incorporadora.',
+    quote: '"Quando cada detalhe é pensado, o resultado é inevitável."',
+    gallery: []
   }
 };
 
@@ -1739,9 +1729,11 @@ function openProject(key) {
   document.getElementById('project-specs').innerHTML = p.specs.map(s => `<div class="project-spec">${s}</div>`).join('');
   document.getElementById('project-desc').textContent = p.desc;
   document.getElementById('project-quote').innerHTML = p.quote;
-  document.getElementById('project-gallery').innerHTML = p.gallery.map((img, i) =>
+  const galleryEl = document.getElementById('project-gallery');
+  galleryEl.innerHTML = p.gallery.map((img, i) =>
     `<div class="gallery-img" style="background-image:url('${img}');${i===0?'':'height:280px'}"></div>`
   ).join('');
+  galleryEl.style.display = p.gallery.length ? '' : 'none';
   overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
