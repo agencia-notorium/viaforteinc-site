@@ -11,3 +11,6 @@ node_modules/
 Thumbs.db
 .vscode/
 .idea/
+
+# Ferramenta local de preview (servidor) — não versionar
+.claude/

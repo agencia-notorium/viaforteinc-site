@@ -1432,6 +1432,19 @@ footer {
       </div>
     </div>
 
+    <!-- Card 6 — Évora (futuro lançamento · logo) -->
+    <div class="emp-card fade-up delay-4" data-cat="lancamento" onclick="openProject('evora')">
+      <div class="emp-card-img" style="background-image:url('assets/evora.jpg')"></div>
+      <div class="emp-card-overlay"></div>
+      <div class="emp-card-badge badge-lancamento">Futuro lançamento</div>
+      <div class="emp-card-content">
+        <div class="emp-card-divider"></div>
+        <div class="emp-card-specs">Ponta da Fruta · Vila Velha</div>
+        <div class="emp-card-specs">Casas de 3 quartos com suíte</div>
+        <div class="emp-card-cta">Ver empreendimento →</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1525,6 +1538,7 @@ footer {
           <li><a href="#" onclick="openProject('tallinn'); return false;">Tallinn Fort Residence</a></li>
           <li><a href="#" onclick="openProject('belvedere'); return false;">Belvedere Fort Residence</a></li>
           <li><a href="#" onclick="openProject('galle'); return false;">Galle Fort Residence</a></li>
+          <li><a href="#" onclick="openProject('evora'); return false;">Évora Fort Residence</a></li>
           <li><a href="#empreendimentos">Ver todos</a></li>
         </ul>
       </div>
@@ -1769,6 +1783,14 @@ const projects = {
     specs: ['Colinas · Vila Velha', '2 quartos e 2 quartos com suíte', 'Pronto para morar · 100% vendido'],
     desc: 'O Vento Aragano consolidou um novo padrão de moradia em Colinas, Vila Velha. Com apartamentos de 2 quartos e 2 quartos com suíte, o empreendimento pronto para morar e 100% vendido reforça a confiança do mercado na Via Forte Incorporadora.',
     quote: '"Viver bem é viver no lugar certo."',
+    gallery: []
+  },
+  evora: {
+    title: 'Évora <em>Fort Residence</em>',
+    img: 'assets/evora.jpg',
+    specs: ['Ponta da Fruta · Vila Velha', 'Casas de 3 quartos com suíte', 'Futuro lançamento'],
+    desc: 'O Évora Fort Residence traz exclusivas casas de 3 quartos com suíte para a Ponta da Fruta, em Vila Velha. Um futuro lançamento da Via Forte que combina privacidade, arquitetura contemporânea e a tranquilidade de viver perto do mar. Cadastre-se para ser avisado em primeira mão.',
+    quote: '"O futuro de morar bem começa aqui."',
     gallery: []
   }
 };
