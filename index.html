@@ -19,14 +19,14 @@
 <meta property="og:title" content="Via Forte INC. — Empreendimentos de Alto Padrão no Espírito Santo">
 <meta property="og:description" content="Construímos mais do que imóveis. Construímos patrimônio. Conheça Tallinn Smart Living, Vila Paradiso e Galle.">
 <meta property="og:url" content="https://www.viaforte.com.br/">
-<meta property="og:image" content="https://www.viaforte.com.br/assets/tallinn.png">
+<meta property="og:image" content="https://www.viaforte.com.br/assets/tallinn.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Via Forte INC. — Empreendimentos de Alto Padrão no Espírito Santo">
 <meta name="twitter:description" content="Construímos mais do que imóveis. Construímos patrimônio.">
-<meta name="twitter:image" content="https://www.viaforte.com.br/assets/tallinn.png">
+<meta name="twitter:image" content="https://www.viaforte.com.br/assets/tallinn.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -197,6 +197,10 @@ nav.scrolled {
   transition: transform 8s ease-out;
 }
 .slide.active .slide-bg { transform: scale(1); }
+/* fachada embaçada — teaser de breve lançamento */
+.slide-bg.blurred { filter: blur(20px) brightness(0.92); }
+.slide-bg.blurred,
+.slide.active .slide-bg.blurred { transform: scale(1.25); }
 
 /* lateral blur vignette — exatamente como AAM */
 .slide-vignette {
@@ -506,6 +510,9 @@ nav.scrolled {
   transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);
 }
 .emp-card:hover .emp-card-img { transform: scale(1.08); }
+/* fachada embaçada — teaser de breve lançamento */
+.emp-card.is-blurred .emp-card-img { filter: blur(16px); transform: scale(1.25); }
+.emp-card.is-blurred:hover .emp-card-img { transform: scale(1.25); }
 .emp-card-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.2) 55%, transparent 100%);
@@ -1277,9 +1284,9 @@ footer {
 <section id="hero">
   <div class="slider-track">
 
-    <!-- Slide 1 -->
+    <!-- Slide 1 — Tallinn -->
     <div class="slide active" data-index="0">
-      <div class="slide-bg" style="background-image:url('assets/tallinn.png')"></div>
+      <div class="slide-bg" style="background-image:url('assets/tallinn.jpg')"></div>
       <div class="slide-vignette"></div>
       <div class="slide-content">
         <div class="slide-badge">Praia de Itaparica · Vila Velha</div>
@@ -1291,23 +1298,23 @@ footer {
       </div>
     </div>
 
-    <!-- Slide 2 -->
+    <!-- Slide 2 — Belvedere -->
     <div class="slide" data-index="1">
-      <div class="slide-bg" style="background-image:url('assets/paradiso.png')"></div>
+      <div class="slide-bg" style="background-image:url('assets/belvedere.jpg')"></div>
       <div class="slide-vignette"></div>
       <div class="slide-content">
-        <div class="slide-badge">100% Vendido · Vitória</div>
-        <h1 class="slide-title">Villa<br>Paradiso</h1>
-        <div class="slide-specs">2 e 3 quartos com suíte e apartamentos Garden</div>
-        <div class="slide-specs">Barro Vermelho · Pronto para morar · 100% vendido</div>
+        <div class="slide-badge">Breve lançamento · Aracruz</div>
+        <h1 class="slide-title">Belvedere<br>Fort Residence</h1>
+        <div class="slide-specs">Estúdios, 2 quartos com suíte e coberturas duplex</div>
+        <div class="slide-specs">Segato · Aracruz</div>
         <div class="slide-divider"></div>
-        <a href="#" class="slide-cta" onclick="openProject('paradiso'); return false;">Conheça o empreendimento</a>
+        <a href="#" class="slide-cta" onclick="openProject('belvedere'); return false;">Saiba mais</a>
       </div>
     </div>
 
-    <!-- Slide 3 -->
+    <!-- Slide 3 — Galle (fachada embaçada) -->
     <div class="slide" data-index="2">
-      <div class="slide-bg" style="background-image:url('assets/galle.png')"></div>
+      <div class="slide-bg blurred" style="background-image:url('assets/galle.jpg')"></div>
       <div class="slide-vignette"></div>
       <div class="slide-content">
         <div class="slide-badge">Breve lançamento · Vila Velha</div>
@@ -1357,7 +1364,7 @@ footer {
 
     <!-- Card 1 — Tallinn -->
     <div class="emp-card fade-up delay-1" data-cat="lancamento" onclick="openProject('tallinn')">
-      <div class="emp-card-img" style="background-image:url('assets/tallinn.png')"></div>
+      <div class="emp-card-img" style="background-image:url('assets/tallinn.jpg')"></div>
       <div class="emp-card-overlay"></div>
       <div class="emp-card-badge badge-lancamento">Saiba mais</div>
       <div class="emp-card-content">
@@ -1369,9 +1376,23 @@ footer {
       </div>
     </div>
 
-    <!-- Card 2 — Galle -->
-    <div class="emp-card fade-up delay-2" data-cat="lancamento" onclick="openProject('galle')">
-      <div class="emp-card-img" style="background-image:url('assets/galle.png')"></div>
+    <!-- Card 2 — Belvedere -->
+    <div class="emp-card fade-up delay-2" data-cat="lancamento" onclick="openProject('belvedere')">
+      <div class="emp-card-img" style="background-image:url('assets/belvedere.jpg')"></div>
+      <div class="emp-card-overlay"></div>
+      <div class="emp-card-badge badge-lancamento">Breve lançamento</div>
+      <div class="emp-card-content">
+        <div class="emp-card-name">Belvedere<br>Fort Residence</div>
+        <div class="emp-card-divider"></div>
+        <div class="emp-card-specs">Segato · Aracruz</div>
+        <div class="emp-card-specs">Estúdios, 2 quartos com suíte e coberturas duplex</div>
+        <div class="emp-card-cta">Ver empreendimento →</div>
+      </div>
+    </div>
+
+    <!-- Card 3 — Galle (fachada embaçada) -->
+    <div class="emp-card is-blurred fade-up delay-3" data-cat="lancamento" onclick="openProject('galle')">
+      <div class="emp-card-img" style="background-image:url('assets/galle.jpg')"></div>
       <div class="emp-card-overlay"></div>
       <div class="emp-card-badge badge-lancamento">Breve lançamento</div>
       <div class="emp-card-content">
@@ -1383,9 +1404,9 @@ footer {
       </div>
     </div>
 
-    <!-- Card 3 — Villa Paradiso -->
-    <div class="emp-card fade-up delay-3" data-cat="entregue" onclick="openProject('paradiso')">
-      <div class="emp-card-img" style="background-image:url('assets/paradiso.png')"></div>
+    <!-- Card 4 — Villa Paradiso -->
+    <div class="emp-card fade-up delay-4" data-cat="entregue" onclick="openProject('paradiso')">
+      <div class="emp-card-img" style="background-image:url('assets/paradiso.jpg')"></div>
       <div class="emp-card-overlay"></div>
       <div class="emp-card-badge badge-entregue">Pronto para morar · 100% vendido</div>
       <div class="emp-card-content">
@@ -1393,6 +1414,20 @@ footer {
         <div class="emp-card-divider"></div>
         <div class="emp-card-specs">Barro Vermelho · Vitória</div>
         <div class="emp-card-specs">2 e 3 quartos com suíte e apartamentos Garden</div>
+        <div class="emp-card-cta">Ver empreendimento →</div>
+      </div>
+    </div>
+
+    <!-- Card 5 — Vento Aragano -->
+    <div class="emp-card fade-up delay-4" data-cat="entregue" onclick="openProject('vento')">
+      <div class="emp-card-img" style="background-image:url('assets/vento.jpg')"></div>
+      <div class="emp-card-overlay"></div>
+      <div class="emp-card-badge badge-entregue">Pronto para morar · 100% vendido</div>
+      <div class="emp-card-content">
+        <div class="emp-card-name">Vento<br>Aragano</div>
+        <div class="emp-card-divider"></div>
+        <div class="emp-card-specs">Colinas · Vila Velha</div>
+        <div class="emp-card-specs">2 quartos e 2 quartos com suíte</div>
         <div class="emp-card-cta">Ver empreendimento →</div>
       </div>
     </div>
@@ -1487,10 +1522,10 @@ footer {
       <div>
         <div class="footer-col-title">Empreendimentos</div>
         <ul class="footer-links">
-          <li><a href="#">Tallinn Studio</a></li>
-          <li><a href="#">Horizonte View</a></li>
-          <li><a href="#">Essenza Residences</a></li>
-          <li><a href="#">Ver todos</a></li>
+          <li><a href="#" onclick="openProject('tallinn'); return false;">Tallinn Fort Residence</a></li>
+          <li><a href="#" onclick="openProject('belvedere'); return false;">Belvedere Fort Residence</a></li>
+          <li><a href="#" onclick="openProject('galle'); return false;">Galle Fort Residence</a></li>
+          <li><a href="#empreendimentos">Ver todos</a></li>
         </ul>
       </div>
       <div>
@@ -1668,16 +1703,17 @@ counters.forEach(c => counterObserver.observe(c));
 
 // ── CARD PARALLAX TILT
 document.querySelectorAll('.emp-card').forEach(card => {
+  const blurred = card.classList.contains('is-blurred');
   card.addEventListener('mousemove', e => {
     const r = card.getBoundingClientRect();
     const x = (e.clientX - r.left) / r.width - 0.5;
     const y = (e.clientY - r.top) / r.height - 0.5;
     card.style.transform = `perspective(1000px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) scale(1.02)`;
-    card.querySelector('.emp-card-img').style.transform = `scale(1.08) translate(${x * -8}px, ${y * -8}px)`;
+    if (!blurred) card.querySelector('.emp-card-img').style.transform = `scale(1.08) translate(${x * -8}px, ${y * -8}px)`;
   });
   card.addEventListener('mouseleave', () => {
     card.style.transform = 'perspective(1000px) rotateY(0) rotateX(0) scale(1)';
-    card.querySelector('.emp-card-img').style.transform = 'scale(1)';
+    if (!blurred) card.querySelector('.emp-card-img').style.transform = 'scale(1)';
   });
 });
 
@@ -1697,15 +1733,23 @@ function filterCards(cat, btn) {
 const projects = {
   tallinn: {
     title: 'Tallinn <em>Fort Residence</em>',
-    img: 'assets/tallinn.png',
+    img: 'assets/tallinn.jpg',
     specs: ['Praia de Itaparica · Vila Velha', 'Estúdios e apartamentos Garden', 'Saiba mais'],
     desc: 'O Tallinn Fort Residence eleva o conceito de morar na Praia de Itaparica, em Vila Velha. Com estúdios e apartamentos Garden de arquitetura contemporânea, foi concebido para quem valoriza a vida à beira-mar, localização privilegiada e design inteligente. Cadastre-se para saber mais.',
     quote: '"Morar à beira-mar com a assinatura Via Forte."',
     gallery: []
   },
+  belvedere: {
+    title: 'Belvedere <em>Fort Residence</em>',
+    img: 'assets/belvedere.jpg',
+    specs: ['Segato · Aracruz', 'Estúdios, 2 quartos com suíte e coberturas duplex', 'Breve lançamento'],
+    desc: 'O Belvedere Fort Residence chega ao Segato, em Aracruz, com estúdios, apartamentos de 2 quartos com suíte e exclusivas coberturas duplex. Um breve lançamento Via Forte para quem busca sofisticação, conforto e localização privilegiada. Cadastre-se para ter acesso em primeira mão.',
+    quote: '"O melhor da vida começa por um endereço à altura."',
+    gallery: []
+  },
   galle: {
     title: 'Galle <em>Fort Residence</em>',
-    img: 'assets/galle.png',
+    img: 'assets/galle.jpg',
     specs: ['Jockey de Itaparica · Vila Velha', '1 quarto e 2 quartos', 'Breve lançamento'],
     desc: 'O Galle Fort Residence é o próximo capítulo da Via Forte no Jockey de Itaparica, em Vila Velha. Apartamentos de 1 e 2 quartos pensados para quem busca localização estratégica e o padrão de entrega que só a Via Forte oferece. Cadastre-se para ter acesso em primeira mão.',
     quote: '"O melhor endereço de amanhã começa com a decisão de hoje."',
@@ -1713,10 +1757,18 @@ const projects = {
   },
   paradiso: {
     title: 'Villa <em>Paradiso</em>',
-    img: 'assets/paradiso.png',
+    img: 'assets/paradiso.jpg',
     specs: ['Barro Vermelho · Vitória', '2 e 3 quartos com suíte e apartamentos Garden', 'Pronto para morar · 100% vendido'],
     desc: 'O Villa Paradiso elevou o padrão de vida no Barro Vermelho, em Vitória. Com apartamentos de 2 e 3 quartos com suíte e unidades Garden, o empreendimento pronto para morar e 100% vendido é a prova da confiança que o mercado deposita na Via Forte Incorporadora.',
     quote: '"Quando cada detalhe é pensado, o resultado é inevitável."',
+    gallery: []
+  },
+  vento: {
+    title: 'Vento <em>Aragano</em>',
+    img: 'assets/vento.jpg',
+    specs: ['Colinas · Vila Velha', '2 quartos e 2 quartos com suíte', 'Pronto para morar · 100% vendido'],
+    desc: 'O Vento Aragano consolidou um novo padrão de moradia em Colinas, Vila Velha. Com apartamentos de 2 quartos e 2 quartos com suíte, o empreendimento pronto para morar e 100% vendido reforça a confiança do mercado na Via Forte Incorporadora.',
+    quote: '"Viver bem é viver no lugar certo."',
     gallery: []
   }
 };
