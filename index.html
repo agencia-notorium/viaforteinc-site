@@ -1254,6 +1254,54 @@ footer {
   .cta-form { flex-direction: column; }
   .cta-input { border-right: 1px solid rgba(255,255,255,0.12); border-bottom: none; }
 }
+
+/* ── CARROSSEL (página do empreendimento) ── */
+.project-carousel { max-width: 1200px; margin: 0 auto 80px; padding: 0 60px; }
+.carousel-title {
+  font-family: 'Jost', sans-serif; font-size: 34px; font-weight: 300;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--white);
+  margin-bottom: 28px;
+}
+.carousel-title em { font-style: normal; color: var(--terracota); }
+.carousel-viewport { position: relative; overflow: hidden; }
+.carousel-track { display: flex; transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+.carousel-slide {
+  min-width: 100%; height: 540px; position: relative;
+  background-size: cover; background-position: center;
+}
+.carousel-cap {
+  position: absolute; left: 0; bottom: 0; width: 100%;
+  padding: 20px 32px;
+  font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 400;
+  letter-spacing: 0.25em; text-transform: uppercase; color: var(--white);
+  background: linear-gradient(to top, rgba(10,10,10,0.85), transparent);
+}
+.carousel-cap span { color: var(--terracota); margin-right: 12px; }
+.carousel-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 52px; height: 52px; z-index: 3;
+  background: rgba(10,10,10,0.55); border: 1px solid rgba(255,255,255,0.25);
+  color: var(--white); font-size: 26px; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  cursor: none; transition: background 0.3s, border-color 0.3s;
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+}
+.carousel-arrow:hover { background: var(--terracota); border-color: var(--terracota); }
+.carousel-arrow.prev { left: 20px; }
+.carousel-arrow.next { right: 20px; }
+.carousel-dots { display: flex; gap: 10px; justify-content: center; margin-top: 22px; }
+.carousel-dots button {
+  width: 8px; height: 8px; border-radius: 50%; border: none; padding: 0;
+  background: rgba(255,255,255,0.25); cursor: none; transition: all 0.3s;
+}
+.carousel-dots button.active { background: var(--terracota); width: 26px; border-radius: 4px; }
+@media (max-width: 900px) {
+  .project-carousel { padding: 0 24px; }
+  .carousel-title { font-size: 24px; }
+  .carousel-slide { height: 300px; }
+  .carousel-arrow { width: 42px; height: 42px; font-size: 22px; }
+  .carousel-cap { padding: 16px 20px; font-size: 13px; }
+}
 </style>
 </head>
 <body>
@@ -1534,8 +1582,8 @@ footer {
         <ul class="footer-links">
           <li><a href="#sobre">Sobre nós</a></li>
           <li><a href="https://grupoviaforte.com.br" target="_blank" rel="noopener">Grupo Via Forte</a></li>
-          <li><a href="#">Compramos seu terreno</a></li>
-          <li><a href="#">Trabalhe conosco</a></li>
+          <li><a href="https://wa.me/5527999503919?text=Olá!%20Tenho%20um%20terreno%20para%20oferecer%20à%20Via%20Forte." target="_blank" rel="noopener">Compramos seu terreno</a></li>
+          <li><a href="https://wa.me/5527997860859?text=Olá!%20Tenho%20interesse%20em%20trabalhar%20na%20Via%20Forte." target="_blank" rel="noopener">Trabalhe conosco</a></li>
         </ul>
       </div>
       <div>
@@ -1580,6 +1628,15 @@ footer {
       <blockquote class="project-quote" id="project-quote"></blockquote>
     </div>
     <div class="project-gallery" id="project-gallery"></div>
+    <div class="project-carousel" id="project-carousel" style="display:none">
+      <h3 class="carousel-title">Veja os <em>melhores</em> aqui</h3>
+      <div class="carousel-viewport" ontouchstart="carouselTouchStart(event)" ontouchend="carouselTouchEnd(event)">
+        <div class="carousel-track" id="carousel-track"></div>
+        <button class="carousel-arrow prev" onclick="moveCarousel(-1)" aria-label="Anterior">&#8249;</button>
+        <button class="carousel-arrow next" onclick="moveCarousel(1)" aria-label="Próximo">&#8250;</button>
+      </div>
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
     <div class="project-cta-section">
       <h3 class="project-cta-headline">Quero saber mais sobre este <em>Empreendimento.</em></h3>
       <div class="project-form">
@@ -1736,7 +1793,16 @@ const projects = {
     specs: ['Praia de Itaparica · Vila Velha', 'Estúdios e apartamentos Garden', 'Saiba mais'],
     desc: 'O Tallinn Fort Residence eleva o conceito de morar na Praia de Itaparica, em Vila Velha. Com estúdios e apartamentos Garden de arquitetura contemporânea, foi concebido para quem valoriza a vida à beira-mar, localização privilegiada e design inteligente. Cadastre-se para saber mais.',
     quote: '"Morar à beira-mar com a assinatura Via Forte."',
-    gallery: []
+    gallery: [],
+    carousel: [
+      { img: 'assets/tallinn-fachada.jpg',   cap: 'Fachada' },
+      { img: 'assets/tallinn-varanda.jpg',   cap: 'Varanda' },
+      { img: 'assets/tallinn-mercado.jpg',   cap: 'Mercado' },
+      { img: 'assets/tallinn-pet.jpg',       cap: 'Espaço Pet' },
+      { img: 'assets/tallinn-quarto.jpg',    cap: 'Apartamento' },
+      { img: 'assets/tallinn-hall.jpg',      cap: 'Hall de entrada' },
+      { img: 'assets/tallinn-coworking.jpg', cap: 'Coworking' }
+    ]
   },
   belvedere: {
     title: 'Belvedere <em>Fort Residence</em>',
@@ -1788,6 +1854,7 @@ function openProject(key) {
     `<div class="gallery-img" style="background-image:url('${img}');${i===0?'':'height:280px'}"></div>`
   ).join('');
   galleryEl.style.display = p.gallery.length ? '' : 'none';
+  buildCarousel(p.carousel);
   overlay.scrollTop = 0;
   overlay.classList.add('open');
   document.getElementById('project-close').classList.add('visible');
@@ -1798,7 +1865,38 @@ function closeProject() {
   document.getElementById('project-overlay').classList.remove('open');
   document.getElementById('project-close').classList.remove('visible');
   document.body.style.overflow = '';
+  clearInterval(carTimer);
 }
+
+/* ── CARROSSEL do empreendimento ── */
+let carSlides = [], carIndex = 0, carTimer = null, carTouchX = 0;
+function buildCarousel(items){
+  const wrap = document.getElementById('project-carousel');
+  const track = document.getElementById('carousel-track');
+  const dots = document.getElementById('carousel-dots');
+  clearInterval(carTimer);
+  carSlides = items || [];
+  carIndex = 0;
+  if (!carSlides.length){ wrap.style.display = 'none'; track.innerHTML = ''; dots.innerHTML = ''; return; }
+  wrap.style.display = '';
+  track.innerHTML = carSlides.map(s =>
+    `<div class="carousel-slide" style="background-image:url('${s.img}')"><div class="carousel-cap"><span>—</span>${s.cap}</div></div>`
+  ).join('');
+  dots.innerHTML = carSlides.map((s, i) =>
+    `<button class="${i === 0 ? 'active' : ''}" onclick="goCarousel(${i})" aria-label="${s.cap}"></button>`
+  ).join('');
+  updateCarousel();
+  carTimer = setInterval(() => moveCarousel(1), 5000);
+}
+function updateCarousel(){
+  const track = document.getElementById('carousel-track');
+  if (track) track.style.transform = `translateX(-${carIndex * 100}%)`;
+  document.querySelectorAll('#carousel-dots button').forEach((b, i) => b.classList.toggle('active', i === carIndex));
+}
+function goCarousel(i){ if (!carSlides.length) return; carIndex = (i + carSlides.length) % carSlides.length; updateCarousel(); }
+function moveCarousel(dir){ goCarousel(carIndex + dir); }
+function carouselTouchStart(e){ carTouchX = e.changedTouches[0].clientX; }
+function carouselTouchEnd(e){ const dx = e.changedTouches[0].clientX - carTouchX; if (Math.abs(dx) > 40) moveCarousel(dx < 0 ? 1 : -1); }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProject(); });
 </script>
